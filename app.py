@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "change-this-secret-key-12345")
 
 # ---------- LOGIN CREDENTIALS ----------
-USERNAME = os.environ.get("DASH_USER", "ram")
-PASSWORD = os.environ.get("DASH_PASS", "ali")
+USERNAME = os.environ.get("DASH_USER", "Keerth")
+PASSWORD = os.environ.get("DASH_PASS", "kkkkk")
 
 # ---------- IN-MEMORY MESSAGE STORE ----------
 messages = []   # each: {"id": int, "text": str, "time": str}
