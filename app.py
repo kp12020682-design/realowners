@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "change-this-secret-key-12345")
 
 # ---------- LOGIN CREDENTIALS ----------
-USERNAME = os.environ.get("DASH_USER", "admin")
-PASSWORD = os.environ.get("DASH_PASS", "admin123")
+USERNAME = os.environ.get("DASH_USER", "ram")
+PASSWORD = os.environ.get("DASH_PASS", "ali")
 
 # ---------- IN-MEMORY MESSAGE STORE ----------
 messages = []   # each: {"id": int, "text": str, "time": str}
@@ -27,7 +27,7 @@ def login():
     if request.method == "POST":
         u = request.form.get("username", "").strip()
         p = request.form.get("password", "").strip()
-        if u == ramji and p == khans:
+        if u == USERNAME and p == PASSWORD:
             session["user"] = u
             return redirect(url_for("dashboard"))
         flash("❌ Galat username ya password!", "error")
